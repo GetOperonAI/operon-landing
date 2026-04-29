@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bun run dev)",
+      "Bash(bun run build)",
+      "Bash(bun run preview)",
+      "Bash(bun run lint)",
+      "Bash(bun add *)",
+      "Bash(bun install *)",
+      "Bash(bun x tsc *)",
+      "Bash(ls *)",
+      "Bash(mkdir *)"
+    ]
+  }
+}
