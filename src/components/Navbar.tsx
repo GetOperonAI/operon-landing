@@ -12,9 +12,9 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-card-border/50">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-[#07120f]/80 backdrop-blur-xl">
       <div className="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="font-display text-[22px] font-semibold tracking-[-0.3px] text-[#1c1c1e]">
+        <a href="#" className="font-display text-[22px] font-semibold tracking-[0px] text-white">
           operon
         </a>
 
@@ -23,14 +23,14 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-muted text-[15px] font-medium tracking-[0.2px] hover:text-[#1c1c1e] transition-colors"
+              className="text-white/58 text-[15px] font-medium tracking-[0px] hover:text-white transition-colors"
             >
               {link.label}
             </a>
           ))}
           <a
             href="#contact"
-            className="bg-accent text-white text-[15px] font-medium px-6 py-2.5 rounded-full hover:bg-accent-light transition-colors"
+            className="bg-white text-[#07120f] text-[15px] font-medium px-5 py-2.5 rounded-md hover:bg-accent hover:text-white transition-colors"
           >
             Request a Demo
           </a>
@@ -41,9 +41,9 @@ export default function Navbar() {
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
-          <span className={`w-5 h-0.5 bg-[#1c1c1e] transition-transform ${mobileOpen ? 'rotate-45 translate-y-2' : ''}`} />
-          <span className={`w-5 h-0.5 bg-[#1c1c1e] transition-opacity ${mobileOpen ? 'opacity-0' : ''}`} />
-          <span className={`w-5 h-0.5 bg-[#1c1c1e] transition-transform ${mobileOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+          <span className={`w-5 h-0.5 bg-white transition-transform ${mobileOpen ? 'rotate-45 translate-y-2' : ''}`} />
+          <span className={`w-5 h-0.5 bg-white transition-opacity ${mobileOpen ? 'opacity-0' : ''}`} />
+          <span className={`w-5 h-0.5 bg-white transition-transform ${mobileOpen ? '-rotate-45 -translate-y-2' : ''}`} />
         </button>
       </div>
 
@@ -53,14 +53,14 @@ export default function Navbar() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="md:hidden bg-white border-b border-card-border overflow-hidden"
+            className="md:hidden border-b border-white/10 bg-[#07120f] overflow-hidden"
           >
             <div className="px-6 py-4 flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-muted text-[16px] font-medium hover:text-[#1c1c1e]"
+                  className="text-white/68 text-[16px] font-medium hover:text-white"
                   onClick={() => setMobileOpen(false)}
                 >
                   {link.label}
@@ -68,7 +68,7 @@ export default function Navbar() {
               ))}
               <a
                 href="#contact"
-                className="bg-accent text-white text-center text-[15px] font-medium px-6 py-2.5 rounded-full"
+                className="bg-white text-[#07120f] text-center text-[15px] font-medium px-6 py-2.5 rounded-md"
                 onClick={() => setMobileOpen(false)}
               >
                 Request a Demo

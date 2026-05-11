@@ -29,39 +29,43 @@ export default function HowItWorks() {
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section className="py-24 md:py-32 px-6 bg-deep-teal" ref={ref}>
-      <div className="max-w-[1100px] mx-auto">
+    <section className="px-6 py-24 md:py-32 bg-[#07120f] text-white" ref={ref}>
+      <div className="max-w-[1200px] mx-auto">
         <motion.div
-          className="text-center mb-16"
+          className="mb-16 grid gap-8 md:grid-cols-[1fr_0.72fr] md:items-end"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="font-display text-[32px] md:text-[44px] font-normal leading-[1.1] tracking-[-0.3px] text-[#1c1c1e]">
-            From fragmented data to automated workflows
+          <h2 className="font-display text-[42px] md:text-[76px] font-normal leading-[0.98] tracking-[0px] text-white">
+            From raw data to executed workflows.
           </h2>
+          <p className="text-[18px] leading-[1.55] text-white/58">
+            Start narrow. Connect the systems. Let the operating layer expand
+            as departments discover repeatable work.
+          </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-white/12 bg-white/12 md:grid-cols-4">
           {steps.map((step, i) => (
             <motion.div
               key={step.num}
-              className="relative"
+              className="relative min-h-[260px] bg-[#0c1713] p-7"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: i * 0.12 }}
             >
               {i < steps.length - 1 && (
-                <div className="hidden md:block absolute top-6 left-[calc(50%+24px)] right-[-24px] h-px bg-card-border" />
+                <div className="pulse-line hidden md:block absolute top-12 left-[58%] right-[-28%] h-px bg-gradient-to-r from-accent to-sky-300" />
               )}
-              <div className="text-center md:text-left">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full border border-accent/30 text-accent font-display text-[14px] font-medium tracking-[0.5px] mb-4">
+              <div>
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-md border border-accent/35 text-accent font-mono text-[14px] font-medium tracking-[0px] mb-14">
                   {step.num}
                 </div>
-                <h3 className="font-display text-[20px] font-medium tracking-[0.1px] text-[#1c1c1e] mb-2">
+                <h3 className="font-display text-[24px] font-medium tracking-[0px] text-white mb-3">
                   {step.title}
                 </h3>
-                <p className="text-muted text-[15px] leading-[1.56]">{step.description}</p>
+                <p className="text-white/58 text-[15px] leading-[1.56]">{step.description}</p>
               </div>
             </motion.div>
           ))}

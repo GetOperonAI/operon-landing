@@ -2,14 +2,14 @@
 
 @theme {
   --color-void: #000000;
-  --color-deep-teal: #f8f9fb;
-  --color-dark-forest: #f1f3f6;
-  --color-forest: #0a1628;
-  --color-card-border: #e2e5ea;
-  --color-accent: #2a41b6;
-  --color-accent-light: #3b56d9;
-  --color-accent-wash: #eef1ff;
-  --color-muted: #555a6a;
+  --color-deep-teal: #f5f7f5;
+  --color-dark-forest: #eef1ed;
+  --color-forest: #07120f;
+  --color-card-border: #dfe4df;
+  --color-accent: #2563eb;
+  --color-accent-light: #60a5fa;
+  --color-accent-wash: #eaf3ff;
+  --color-muted: #5d635f;
   --color-shade-50: #71717A;
   --color-shade-70: #3F3F46;
 
@@ -25,7 +25,75 @@ body {
   margin: 0;
   font-family: var(--font-body);
   color: #1c1c1e;
-  background: #ffffff;
+  background: #f8f8f4;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+@keyframes grid-drift {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 48px 48px, 96px 96px;
+  }
+}
+
+@keyframes pulse-line {
+  0%, 100% {
+    opacity: 0.22;
+    transform: scaleX(0.68);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes feed-rise {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.motion-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 48px 48px;
+  animation: grid-drift 18s linear infinite;
+}
+
+.motion-grid-light {
+  background-image:
+    linear-gradient(rgba(7, 18, 15, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(7, 18, 15, 0.07) 1px, transparent 1px);
+  background-size: 42px 42px;
+  animation: grid-drift 22s linear infinite;
+}
+
+.pulse-line {
+  transform-origin: left center;
+  animation: pulse-line 2.8s ease-in-out infinite;
+}
+
+.feed-track {
+  animation: feed-rise 16s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-grid,
+  .motion-grid-light,
+  .pulse-line,
+  .feed-track {
+    animation: none;
+  }
 }

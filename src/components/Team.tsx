@@ -9,7 +9,7 @@ const founders = [
     bio: "Full-stack engineer shipping product alongside Berkay. Previously co-founded a startup with Tanalp.",
   },
   {
-    name: "Tanalp Acaroglu",
+    name: "Tanalp Sengun",
     role: "Co-Founder, Business",
     location: "London → SF Bay Area",
     bio: "Brought in the first enterprise customer. Full-time for 3 months. Previously co-founded a startup.",
@@ -22,46 +22,48 @@ export default function Team() {
 
   return (
     <section id="team" className="py-24 md:py-32 px-6 bg-white" ref={ref}>
-      <div className="max-w-[1100px] mx-auto">
+      <div className="max-w-[1200px] mx-auto">
         <motion.div
-          className="text-center mb-14"
+          className="mb-14 grid gap-8 md:grid-cols-[0.92fr_1.08fr] md:items-end"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="font-display text-[32px] md:text-[44px] font-normal leading-[1.1] tracking-[-0.3px] text-[#1c1c1e] mb-4">
-            Built by engineers, not a pitch deck
+          <h2 className="font-display text-[42px] md:text-[76px] font-normal leading-[0.98] tracking-[0px] text-[#07120f]">
+            Built by operators, not a pitch deck.
           </h2>
-          <p className="text-muted text-[18px] leading-[1.56] tracking-[0.3px] max-w-[600px] mx-auto">
+          <p className="text-muted text-[19px] leading-[1.55] tracking-[0px] max-w-[620px]">
             The founders have known each other for 5–10+ years. College friends,
             brothers, and repeat collaborators.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-[800px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-px overflow-hidden rounded-lg border border-card-border bg-card-border">
           {founders.map((f, i) => (
             <motion.div
               key={f.name}
-              className="bg-deep-teal border border-card-border rounded-xl p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_4px_12px_rgba(0,0,0,0.03)]"
+              className="bg-[#f8f8f4] p-8 md:p-10"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: i * 0.1 }}
             >
-              <div className="w-14 h-14 rounded-full bg-accent-wash flex items-center justify-center mb-5">
-                <span className="font-display text-[20px] font-medium text-accent">
+              <div className="w-14 h-14 rounded-md bg-accent-wash flex items-center justify-center mb-10">
+                <span className="font-display text-[20px] font-medium text-accent tracking-[0px]">
                   {f.name
                     .split(" ")
                     .map((n) => n[0])
                     .join("")}
                 </span>
               </div>
-              <h3 className="font-display text-[20px] font-medium tracking-[0.1px] text-[#1c1c1e]">
+              <h3 className="font-display text-[28px] font-medium tracking-[0px] text-[#07120f]">
                 {f.name}
               </h3>
-              <p className="text-accent text-[14px] font-medium tracking-[0.14px] mb-1">
+              <p className="text-accent text-[14px] font-medium tracking-[0px] mb-1">
                 {f.role}
               </p>
-              <p className="text-shade-50 text-[13px] tracking-[0.5px] mb-4">{f.location}</p>
+              <p className="text-shade-50 text-[13px] tracking-[0px] mb-5">
+                {f.location}
+              </p>
               <p className="text-muted text-[15px] leading-[1.56]">{f.bio}</p>
             </motion.div>
           ))}
