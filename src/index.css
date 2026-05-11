@@ -64,6 +64,35 @@ body {
   }
 }
 
+@keyframes path-flow {
+  0% {
+    stroke-dashoffset: 72;
+  }
+  to {
+    stroke-dashoffset: -168;
+  }
+}
+
+@keyframes orbit-pulse {
+  0%, 100% {
+    opacity: 0.62;
+    transform: translate(-50%, -50%) scale(0.92);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+}
+
+@keyframes node-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(96, 165, 250, 0.22), 0 0 48px rgba(37, 99, 235, 0.18);
+  }
+  50% {
+    box-shadow: 0 0 0 14px rgba(96, 165, 250, 0), 0 0 76px rgba(96, 165, 250, 0.34);
+  }
+}
+
 .motion-grid {
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
@@ -89,11 +118,32 @@ body {
   animation: feed-rise 16s linear infinite;
 }
 
+.operon-dot-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.14) 1.5px, transparent 1.5px);
+  background-size: 31px 31px;
+}
+
+.flow-path {
+  stroke-dasharray: 12 22;
+  animation: path-flow 8.5s linear infinite;
+}
+
+.flow-dot {
+  animation: orbit-pulse 2.4s ease-in-out infinite;
+}
+
+.hub-glow {
+  animation: node-glow 3.5s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .motion-grid,
   .motion-grid-light,
   .pulse-line,
-  .feed-track {
+  .feed-track,
+  .flow-path,
+  .flow-dot,
+  .hub-glow {
     animation: none;
   }
 }
