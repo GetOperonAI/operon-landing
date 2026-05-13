@@ -1,5 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import burakPortrait from "../assets/team/burak-barlas.jpeg";
+import tanalpPortrait from "../assets/team/tanalp-sengun.jpeg";
 
 const founders = [
   {
@@ -7,12 +9,14 @@ const founders = [
     role: "Co-Founder, Engineering",
     location: "Los Angeles, CA",
     bio: "Full-stack engineer shipping product alongside Berkay. Previously co-founded a startup with Tanalp.",
+    image: burakPortrait,
   },
   {
     name: "Tanalp Sengun",
     role: "Co-Founder, Business",
     location: "London → SF Bay Area",
     bio: "Brought in the first enterprise customer. Full-time for 3 months. Previously co-founded a startup.",
+    image: tanalpPortrait,
   },
 ];
 
@@ -47,13 +51,13 @@ export default function Team() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: i * 0.1 }}
             >
-              <div className="w-14 h-14 rounded-md bg-accent-wash flex items-center justify-center mb-10">
-                <span className="font-display text-[20px] font-medium text-accent tracking-[0px]">
-                  {f.name
-                    .split(" ")
-                    .map((n) => n[0])
-                    .join("")}
-                </span>
+              <div className="mb-8 aspect-[4/3] overflow-hidden rounded-md bg-accent-wash">
+                <img
+                  src={f.image}
+                  alt={`${f.name} portrait`}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
               </div>
               <h3 className="font-display text-[28px] font-medium tracking-[0px] text-[#07120f]">
                 {f.name}
