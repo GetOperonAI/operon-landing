@@ -1,32 +1,36 @@
-import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const steps = [
   {
-    num: '01',
-    title: 'Connect',
-    description: 'We integrate with your school\'s existing tools and data sources. No rip-and-replace.',
+    num: "01",
+    title: "Connect",
+    description:
+      "We integrate with your school's existing tools and data sources. No rip-and-replace.",
   },
   {
-    num: '02',
-    title: 'Structure',
-    description: 'Operon indexes and structures your internal data using embedding-based search.',
+    num: "02",
+    title: "Organize",
+    description:
+      "Operon turns fragmented institutional data into a searchable, structured knowledge layer.",
   },
   {
-    num: '03',
-    title: 'Automate',
-    description: 'AI workflows replace manual processes — from research tracking to editorial automation.',
+    num: "03",
+    title: "Automate",
+    description:
+      "Automate repetitive work like research tracking, reporting, content generation, and internal requests.",
   },
   {
-    num: '04',
-    title: 'Expand',
-    description: 'Start with one use case, then expand across departments as new needs emerge.',
+    num: "04",
+    title: "Expand",
+    description:
+      "Start with one workflow, then expand across departments as new needs emerge.",
   },
-]
+];
 
 export default function HowItWorks() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
     <section className="px-6 py-24 md:py-32 bg-[#07120f] text-white" ref={ref}>
@@ -41,8 +45,8 @@ export default function HowItWorks() {
             From raw data to executed workflows.
           </h2>
           <p className="text-[18px] leading-[1.55] text-white/58">
-            Start narrow. Connect the systems. Let the operating layer expand
-            as departments discover repeatable work.
+            Start narrow. Connect the systems. Let the operating layer expand as
+            departments discover repeatable work.
           </p>
         </motion.div>
 
@@ -65,12 +69,14 @@ export default function HowItWorks() {
                 <h3 className="font-display text-[24px] font-medium tracking-[0px] text-white mb-3">
                   {step.title}
                 </h3>
-                <p className="text-white/58 text-[15px] leading-[1.56]">{step.description}</p>
+                <p className="text-white/58 text-[15px] leading-[1.56]">
+                  {step.description}
+                </p>
               </div>
             </motion.div>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

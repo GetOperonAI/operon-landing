@@ -1,56 +1,134 @@
-import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const painPoints = [
   {
-    title: 'Fragmented Data',
-    description: 'Critical information scattered across spreadsheets, PDFs, emails, CRMs, and student information systems.',
+    title: "Fragmented Data",
+    description:
+      "Critical institutional knowledge lives across disconnected tools and teams.",
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
-        <rect x="2" y="2" width="8" height="8" rx="2" stroke="#2563eb" strokeWidth="1.5" />
-        <rect x="14" y="2" width="8" height="8" rx="2" stroke="#2563eb" strokeWidth="1.5" />
-        <rect x="2" y="14" width="8" height="8" rx="2" stroke="#2563eb" strokeWidth="1.5" />
-        <rect x="14" y="14" width="8" height="8" rx="2" stroke="#2563eb" strokeWidth="1.5" strokeDasharray="3 2" />
+        <rect
+          x="2"
+          y="2"
+          width="8"
+          height="8"
+          rx="2"
+          stroke="#2563eb"
+          strokeWidth="1.5"
+        />
+        <rect
+          x="14"
+          y="2"
+          width="8"
+          height="8"
+          rx="2"
+          stroke="#2563eb"
+          strokeWidth="1.5"
+        />
+        <rect
+          x="2"
+          y="14"
+          width="8"
+          height="8"
+          rx="2"
+          stroke="#2563eb"
+          strokeWidth="1.5"
+        />
+        <rect
+          x="14"
+          y="14"
+          width="8"
+          height="8"
+          rx="2"
+          stroke="#2563eb"
+          strokeWidth="1.5"
+          strokeDasharray="3 2"
+        />
       </svg>
     ),
   },
   {
-    title: 'Manual Workflows',
-    description: 'Staff spend hours on repetitive admin tasks that should be automated.',
+    title: "Manual Workflows",
+    description:
+      "Staff spend hours on repetitive admin tasks that should be automated.",
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
         <circle cx="12" cy="12" r="9" stroke="#2563eb" strokeWidth="1.5" />
-        <path d="M12 7v5l3.5 3.5" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round" />
+        <path
+          d="M12 7v5l3.5 3.5"
+          stroke="#2563eb"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
       </svg>
     ),
   },
   {
-    title: 'Siloed Departments',
-    description: 'Each team builds its own workarounds, creating duplication and inconsistency.',
+    title: "Disconnected Workflows",
+    description:
+      "Departments build isolated workflows, creating duplication, inconsistency, and lost context.",
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
-        <rect x="3" y="3" width="18" height="18" rx="3" stroke="#2563eb" strokeWidth="1.5" />
-        <line x1="12" y1="3" x2="12" y2="21" stroke="#2563eb" strokeWidth="1.5" />
-        <line x1="3" y1="12" x2="21" y2="12" stroke="#2563eb" strokeWidth="1.5" />
+        <rect
+          x="3"
+          y="3"
+          width="18"
+          height="18"
+          rx="3"
+          stroke="#2563eb"
+          strokeWidth="1.5"
+        />
+        <line
+          x1="12"
+          y1="3"
+          x2="12"
+          y2="21"
+          stroke="#2563eb"
+          strokeWidth="1.5"
+        />
+        <line
+          x1="3"
+          y1="12"
+          x2="21"
+          y2="12"
+          stroke="#2563eb"
+          strokeWidth="1.5"
+        />
       </svg>
     ),
   },
   {
-    title: 'Generic AI Falls Short',
-    description: "Tools like Copilot or Notion AI help with search, but don't understand institutional workflows or operations.",
+    title: "Generic AI Falls Short",
+    description:
+      "General-purpose AI tools can search documents, but they don’t understand institutional workflows, approvals, or operational processes.",
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
-        <path d="M6 18l6-12 6 12" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        <line x1="12" y1="14" x2="12" y2="11" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round" />
+        <path
+          d="M6 18l6-12 6 12"
+          stroke="#2563eb"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <line
+          x1="12"
+          y1="14"
+          x2="12"
+          y2="11"
+          stroke="#2563eb"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
         <circle cx="12" cy="16.5" r="0.75" fill="#2563eb" />
       </svg>
     ),
   },
-]
+];
 
 export default function Problem() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
     <section className="px-6 py-24 md:py-32 bg-[#f8f8f4]" ref={ref}>
@@ -64,9 +142,9 @@ export default function Problem() {
           <h2 className="font-display text-[42px] md:text-[72px] font-normal leading-[0.98] tracking-[0px] text-[#07120f]">
             Campus data is stuck between tools.
           </h2>
-          <p className="max-w-[460px] text-[18px] leading-[1.55] text-muted md:ml-auto">
-            Staff should not be the integration layer between PDFs, spreadsheets,
-            emails, CRMs, and student systems.
+          <p className="max-w-[460px] text-[24px] leading-[1.55] text-muted md:ml-auto">
+            Universities still rely on staff to manually connect disconnected
+            systems.
           </p>
         </motion.div>
 
@@ -85,11 +163,13 @@ export default function Problem() {
               <h3 className="font-display text-[22px] font-medium tracking-[0px] text-[#07120f] mb-3">
                 {point.title}
               </h3>
-              <p className="text-muted text-[16px] leading-[1.56]">{point.description}</p>
+              <p className="text-muted text-[16px] leading-[1.56]">
+                {point.description}
+              </p>
             </motion.div>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -11,7 +11,11 @@ const inputNodes = [
     color: "#38bdf8",
     pathId: "student-flow",
     outputPathId: "answer-flow",
-    run: ["match prerequisite gaps", "compose staff answer", "queue student outreach"],
+    run: [
+      "match prerequisite gaps",
+      "compose staff answer",
+      "queue student outreach",
+    ],
   },
   {
     id: "faculty",
@@ -22,7 +26,11 @@ const inputNodes = [
     color: "#818cf8",
     pathId: "faculty-flow",
     outputPathId: "approval-flow",
-    run: ["resolve faculty owner", "check approval policy", "route task to department"],
+    run: [
+      "resolve faculty owner",
+      "check approval policy",
+      "route task to department",
+    ],
   },
   {
     id: "research",
@@ -33,7 +41,11 @@ const inputNodes = [
     color: "#22c55e",
     pathId: "research-flow",
     outputPathId: "report-flow",
-    run: ["cluster recent papers", "draft department report", "surface funding matches"],
+    run: [
+      "cluster recent papers",
+      "draft department report",
+      "surface funding matches",
+    ],
   },
   {
     id: "policy",
@@ -44,7 +56,11 @@ const inputNodes = [
     color: "#facc15",
     pathId: "policy-flow",
     outputPathId: "queue-flow",
-    run: ["retrieve source policy", "compare requested action", "queue compliant follow-up"],
+    run: [
+      "retrieve source policy",
+      "compare requested action",
+      "queue compliant follow-up",
+    ],
   },
 ];
 
@@ -58,7 +74,11 @@ const outputNodes = [
     color: "#60a5fa",
     pathId: "answer-flow",
     sourcePathId: "student-flow",
-    run: ["read student context", "cite source record", "return grounded answer"],
+    run: [
+      "read student context",
+      "cite source record",
+      "return grounded answer",
+    ],
   },
   {
     id: "report",
@@ -196,8 +216,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             Operon connects internal systems, understands institutional context,
-            and executes repetitive admin work across student records, faculty
-            data, research papers, policies, and spreadsheets.
+            and automates repetitive operational work across the university.
           </motion.p>
 
           <motion.div
@@ -281,28 +300,30 @@ export default function Hero() {
               const isActive = activePathIds.has(path.id);
 
               return (
-              <g key={path.id}>
-                <path
-                  d={path.d}
-                  stroke={path.color}
-                  strokeWidth={i === flowPaths.length - 1 ? 1 : 2}
-                  strokeLinecap="round"
-                  strokeOpacity={isActive ? 0.28 : 0.08}
-                />
-                <path
-                  id={path.id}
-                  d={path.d}
-                  className="flow-path"
-                  stroke={`url(#${path.id}-gradient)`}
-                  strokeWidth={isActive ? 7 : i === flowPaths.length - 1 ? 3 : 4}
-                  strokeOpacity={isActive ? 1 : 0.42}
-                  strokeLinecap="round"
-                  style={{
-                    animationDelay: `${i * 0.18}s`,
-                    animationDuration: isActive ? "4.8s" : undefined,
-                  }}
-                />
-              </g>
+                <g key={path.id}>
+                  <path
+                    d={path.d}
+                    stroke={path.color}
+                    strokeWidth={i === flowPaths.length - 1 ? 1 : 2}
+                    strokeLinecap="round"
+                    strokeOpacity={isActive ? 0.28 : 0.08}
+                  />
+                  <path
+                    id={path.id}
+                    d={path.d}
+                    className="flow-path"
+                    stroke={`url(#${path.id}-gradient)`}
+                    strokeWidth={
+                      isActive ? 7 : i === flowPaths.length - 1 ? 3 : 4
+                    }
+                    strokeOpacity={isActive ? 1 : 0.42}
+                    strokeLinecap="round"
+                    style={{
+                      animationDelay: `${i * 0.18}s`,
+                      animationDuration: isActive ? "4.8s" : undefined,
+                    }}
+                  />
+                </g>
               );
             })}
 
@@ -373,7 +394,10 @@ export default function Hero() {
               style={{
                 top: node.top,
                 right: node.right,
-                borderColor: activeId === node.id ? `${node.color}88` : "rgba(71, 85, 105, 0.75)",
+                borderColor:
+                  activeId === node.id
+                    ? `${node.color}88`
+                    : "rgba(71, 85, 105, 0.75)",
                 boxShadow:
                   activeId === node.id
                     ? `0 0 44px ${node.color}28, inset 0 0 0 1px ${node.color}55`
@@ -385,7 +409,8 @@ export default function Hero() {
                 style={{
                   borderColor: `${node.color}99`,
                   color: node.color,
-                  backgroundColor: activeId === node.id ? `${node.color}14` : undefined,
+                  backgroundColor:
+                    activeId === node.id ? `${node.color}14` : undefined,
                 }}
               >
                 {node.meta}
@@ -445,7 +470,10 @@ export default function Hero() {
                   key={step.label}
                   className="rounded-md border border-white/10 bg-white/[0.04] p-3"
                   animate={{
-                    borderColor: i === 1 ? `${activeItem.color}4d` : "rgba(255,255,255,0.1)",
+                    borderColor:
+                      i === 1
+                        ? `${activeItem.color}4d`
+                        : "rgba(255,255,255,0.1)",
                     y: i === 1 ? -2 : 0,
                   }}
                   transition={{ duration: 0.25 }}
