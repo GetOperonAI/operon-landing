@@ -8,14 +8,14 @@ const founders = [
     name: "Burak Barlas",
     role: "Co-Founder, Engineering",
     location: "Los Angeles, CA",
-    bio: "Full-stack engineer shipping product alongside Berkay. Previously co-founded a startup with Tanalp.",
+    // bio: "Full-stack engineer shipping product alongside Berkay. Previously co-founded a startup with Tanalp.",
     image: burakPortrait,
   },
   {
     name: "Tanalp Sengun",
     role: "Co-Founder, Business",
     location: "London → SF Bay Area",
-    bio: "Brought in the first enterprise customer. Full-time for 3 months. Previously co-founded a startup.",
+    // bio: "Brought in the first enterprise customer. Full-time for 3 months. Previously co-founded a startup.",
     image: tanalpPortrait,
   },
 ];
