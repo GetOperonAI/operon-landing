@@ -3,20 +3,20 @@ import { useRef } from 'react'
 
 const points = [
   {
-    title: 'Not a search tool',
-    description: "We don't just help staff find information. We help them complete workflows end-to-end.",
+    title: 'Not a chatbot',
+    description: "We return structured, visual outputs with sources, relationships, and next steps.",
   },
   {
     title: 'Institution-specific',
-    description: 'Every school has unique data, systems, and processes. We build AI that understands yours.',
+    description: 'Every school has unique resources, language, programs, and priorities. Operon learns that context.',
   },
   {
-    title: 'Embeds, not replaces',
-    description: 'We integrate directly with existing tools and data sources. No rip-and-replace.',
+    title: 'Evidence-first',
+    description: 'Every recommendation points back to the papers, pages, people, or assets that support it.',
   },
   {
-    title: 'Expands naturally',
-    description: 'One deployment leads to many. The platform gets more valuable the more it\'s used.',
+    title: 'Workflow-ready',
+    description: 'The output is not just an answer. It becomes a brief, benchmark, result board, or review artifact.',
   },
 ]
 
@@ -34,11 +34,11 @@ export default function Differentiators() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="font-display text-[42px] md:text-[76px] font-normal leading-[0.98] tracking-[0px] text-[#07120f]">
-            Why generic AI stops short.
+            Why generic AI feels shallow.
           </h2>
           <p className="text-[19px] leading-[1.55] text-muted">
-            Universities do not need another chatbot. They need a system that
-            understands their permissions, records, approvals, and edge cases.
+            Schools need more than generated text. They need a system that can
+            search institutional resources and show the evidence visually.
           </p>
         </motion.div>
 

@@ -2,9 +2,9 @@ import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 
 const stats = [
-  { value: '$30K+', label: 'Revenue generated' },
-  { value: '3+', label: 'AI workflows deployed' },
-  { value: '30–50%', label: 'Manual work replaced' },
+  { value: '1', label: 'FT10 MBA school currently working with us' },
+  { value: '4', label: 'AI workflows deployed' },
+  { value: '20+', label: 'employees with workload reduced 20–30%' },
 ]
 
 export default function Metrics() {

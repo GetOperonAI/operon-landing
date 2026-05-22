@@ -5,7 +5,7 @@ const painPoints = [
   {
     title: "Fragmented Data",
     description:
-      "Critical institutional knowledge lives across disconnected tools and teams.",
+      "Research, faculty profiles, program data, events, and web assets live in different systems.",
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
         <rect
@@ -51,7 +51,7 @@ const painPoints = [
   {
     title: "Manual Workflows",
     description:
-      "Staff spend hours on repetitive admin tasks that should be automated.",
+      "Teams still assemble briefs, benchmarks, and recommendations by hand.",
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
         <circle cx="12" cy="12" r="9" stroke="#2563eb" strokeWidth="1.5" />
@@ -65,9 +65,9 @@ const painPoints = [
     ),
   },
   {
-    title: "Disconnected Workflows",
+    title: "Flat Search Results",
     description:
-      "Departments build isolated workflows, creating duplication, inconsistency, and lost context.",
+      "Keyword search returns links, not the visual context teams need to decide what matters.",
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
         <rect
@@ -101,7 +101,7 @@ const painPoints = [
   {
     title: "Generic AI Falls Short",
     description:
-      "General-purpose AI tools can search documents, but they don’t understand institutional workflows, approvals, or operational processes.",
+      "Generic tools do not understand institutional context, source relationships, or how schools evaluate evidence.",
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
         <path
@@ -140,11 +140,11 @@ export default function Problem() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="font-display text-[42px] md:text-[72px] font-normal leading-[0.98] tracking-[0px] text-[#07120f]">
-            Campus data is stuck between tools.
+            School knowledge is trapped in flat search.
           </h2>
           <p className="max-w-[460px] text-[24px] leading-[1.55] text-muted md:ml-auto">
-            Universities still rely on staff to manually connect disconnected
-            systems.
+            Staff can find files. The hard part is turning scattered resources
+            into visual, source-backed intelligence.
           </p>
         </motion.div>
 

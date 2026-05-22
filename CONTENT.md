@@ -2,17 +2,17 @@
 
 ## Tagline (50 chars)
 
-AI Operating System for School Management.
+Visual Intelligence for School Resources.
 
 ## Hero Section
 
 ### Headline
 
-The AI Operating System for Universities
+AI That Turns Campus Resources Into Visual Answers
 
 ### Subheadline
 
-Operon connects to your school's internal data and systems, then automates the repetitive admin work staff still do manually — across spreadsheets, emails, PDFs, CRMs, and student systems.
+Operon searches a school's papers, people, programs, and assets, then returns source-grounded maps, briefs, benchmarks, and result boards teams can act on.
 
 ### CTA
 
@@ -29,14 +29,14 @@ Trusted by a top-ranked global business school.
 
 ### Heading
 
-Universities Don't Fail Because They Lack Tools — They Fail Because Their Systems Don't Talk to Each Other
+School Knowledge Is Trapped in Flat Search
 
 ### Pain Points
 
-1. **Fragmented Data** — Critical information scattered across spreadsheets, PDFs, emails, CRMs, and student information systems.
-2. **Manual Workflows** — Staff spend hours on repetitive admin tasks that should be automated.
-3. **Siloed Departments** — Each team builds its own workarounds, creating duplication and inconsistency.
-4. **Generic AI Falls Short** — Tools like Copilot or Notion AI help with search, but don't understand institutional workflows, permissions, or operations.
+1. **Fragmented Data** — Research, faculty profiles, program data, events, and web assets live in different systems.
+2. **Manual Workflows** — Teams still assemble briefs, benchmarks, and recommendations by hand.
+3. **Flat Search Results** — Keyword search returns links, not the visual context teams need to decide what matters.
+4. **Generic AI Falls Short** — General-purpose tools do not understand institutional context, source relationships, or how schools evaluate evidence.
 
 ---
 
@@ -44,18 +44,18 @@ Universities Don't Fail Because They Lack Tools — They Fail Because Their Syst
 
 ### Heading
 
-Replace 30–50% of Manual Work with AI Workflows
+One Intelligence Layer for Institutional Resources
 
 ### Description
 
-Operon embeds AI directly into your school's internal systems — enabling staff not just to find information, but to take action and complete workflows.
+Operon searches across a school's knowledge base and presents visual, source-grounded outputs that teams can use immediately.
 
 ### Capabilities
 
-1. **Retrieve Information Faster** — Instant answers from across all institutional data sources.
-2. **Generate Reports Automatically** — Pull structured reports from fragmented data in seconds.
-3. **Answer Internal Questions** — AI that understands your institution's context, not just keywords.
-4. **Automate Day-to-Day Operations** — Replace repetitive tasks with intelligent, institution-specific automations.
+1. **Search Institutional Resources** — Query papers, faculty, program pages, events, and internal assets together.
+2. **Generate Visual Intelligence** — Turn fragmented sources into maps, briefs, benchmarks, and ranked result boards.
+3. **Explain Every Recommendation** — Show why each result matters with citations, source context, and relationships.
+4. **Move Into Workflow** — Convert visual outputs into editorial plans, curriculum reviews, and research operations.
 
 ---
 
@@ -63,14 +63,14 @@ Operon embeds AI directly into your school's internal systems — enabling staff
 
 ### Heading
 
-From Fragmented Data to Automated Workflows
+From Scattered Resources to Visual Intelligence
 
 ### Steps
 
-1. **Connect** — We integrate with your school's existing tools and data sources. No rip-and-replace.
-2. **Structure** — Operon indexes and structures your internal data using embedding-based search across fragmented sources.
-3. **Automate** — AI workflows replace manual processes — from research tracking to curriculum comparison to editorial automation.
-4. **Expand** — Start with one use case, then expand across departments as new needs emerge organically.
+1. **Connect** — We connect to the resources schools already use: papers, pages, assets, profiles, and internal datasets.
+2. **Index** — Operon structures institutional knowledge into a searchable layer with metadata, relationships, and permissions.
+3. **Visualize** — Teams get maps, briefs, benchmarks, ranked assets, and explainable recommendations instead of flat links.
+4. **Act** — Those visual outputs feed editorial planning, research discovery, curriculum reviews, and communication workflows.
 
 ---
 
@@ -78,14 +78,14 @@ From Fragmented Data to Automated Workflows
 
 ### Heading
 
-Proven Workflows Deployed at a Top Global Business School
+Four Workflows Already Deployed
 
 ### Use Cases
 
-1. **Research & Paper Tracking** — Automatically track, categorize, and surface research papers across departments.
-2. **Editorial Workflow Automation** — Streamline editorial review, approval, and publishing processes.
-3. **Curriculum Comparison** — Compare and analyze curriculum data across programs and years.
-4. **Internal Q&A** — Staff ask natural language questions and get accurate, context-aware answers from institutional data.
+1. **Editorial Intelligence Workflow** — Research intelligence and editorial support for campaign ideas, faculty discovery, paper analysis, and research communication.
+2. **Competitive Intelligence Workflow** — Curriculum intelligence and benchmarking for programme teams comparing institutions, trends, gaps, and strategic opportunities.
+3. **Research Repository & Discovery** — AI-powered repository, classification, and semantic discovery for large collections of papers and institutional documents.
+4. **Conversational Asset Search** — Conversational discovery across research, events, web assets, and institutional knowledge, with explainable recommendations.
 
 ---
 
@@ -97,10 +97,9 @@ Built and Deployed. Not Just a Demo.
 
 ### Stats
 
-- **$30K+** total revenue from a single institution
-- **3+** AI workflows deployed
-- **1** top-ranked global business school as first customer
-- **30–50%** manual work replaced per workflow
+- **1** FT10 MBA school currently working with us
+- **4** AI workflows deployed
+- **20+** employees with workload reduced 20–30%
 
 ---
 
@@ -147,10 +146,10 @@ What We Understand That Others Don't
 
 ### Points
 
-1. **Not a search tool** — We don't just help staff find information. We help them complete workflows end-to-end.
-2. **Institution-specific** — Every school has unique data, systems, and processes. We build AI that understands yours.
-3. **Embeds, not replaces** — We integrate directly with existing tools and data sources. No rip-and-replace required.
-4. **Expands naturally** — One deployment leads to many. The platform gets more valuable the more it's used.
+1. **Not a chatbot** — We return structured, visual outputs with sources, relationships, and next steps.
+2. **Institution-specific** — Every school has unique resources, language, programs, and priorities. Operon learns that context.
+3. **Evidence-first** — Every recommendation points back to the papers, pages, people, or assets that support it.
+4. **Workflow-ready** — The output is not just an answer. It becomes a brief, benchmark, result board, or review artifact.
 
 ---
 
@@ -158,16 +157,16 @@ What We Understand That Others Don't
 
 ### Heading
 
-Ready to Automate Your Institution's Operations?
+Start with one workflow.
 
 ### Subheading
 
-We start with one high-value workflow and expand from there. Let's find yours.
+Tell us which resources your team needs to search, compare, or turn into visual intelligence.
 
 ### CTA
 
-- Primary: "Request a Demo"
-- Secondary: "Contact Us" / hello@operon.ai (placeholder)
+- Form fields: school or institution, work email, demo requested, current problems/workflows
+- Demo options: Editorial Intelligence Workflow, Competitive Intelligence Workflow, Research Repository & Discovery, Conversational Asset Search
 
 ---
 

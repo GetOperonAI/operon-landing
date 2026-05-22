@@ -3,156 +3,156 @@ import { motion } from "framer-motion";
 
 const inputNodes = [
   {
-    id: "students",
-    label: "Student Records",
-    meta: "SIS",
+    id: "faculty",
+    label: "Faculty Profiles",
+    meta: "FAC",
     top: "13%",
     left: "4%",
     color: "#38bdf8",
-    pathId: "student-flow",
-    outputPathId: "answer-flow",
-    run: [
-      "match prerequisite gaps",
-      "compose staff answer",
-      "queue student outreach",
-    ],
-  },
-  {
-    id: "faculty",
-    label: "Faculty Members",
-    meta: "FAC",
-    top: "34%",
-    left: "4%",
-    color: "#818cf8",
     pathId: "faculty-flow",
-    outputPathId: "approval-flow",
+    outputPathId: "map-flow",
     run: [
-      "resolve faculty owner",
-      "check approval policy",
-      "route task to department",
+      "search faculty expertise",
+      "rank source-backed matches",
+      "render relationship map",
     ],
   },
   {
     id: "research",
     label: "Research Papers",
     meta: "DOC",
-    top: "55%",
+    top: "34%",
     left: "4%",
-    color: "#22c55e",
+    color: "#818cf8",
     pathId: "research-flow",
-    outputPathId: "report-flow",
+    outputPathId: "board-flow",
     run: [
-      "cluster recent papers",
-      "draft department report",
-      "surface funding matches",
+      "cluster papers by theme",
+      "extract evidence and citations",
+      "build editorial brief",
     ],
   },
   {
-    id: "policy",
-    label: "Policy Library",
-    meta: "PDF",
+    id: "programs",
+    label: "Peer Programs",
+    meta: "WEB",
+    top: "55%",
+    left: "4%",
+    color: "#22c55e",
+    pathId: "program-flow",
+    outputPathId: "benchmark-flow",
+    run: [
+      "compare peer curricula",
+      "detect themes and gaps",
+      "generate benchmark view",
+    ],
+  },
+  {
+    id: "assets",
+    label: "Events & Assets",
+    meta: "CMS",
     top: "76%",
     left: "4%",
     color: "#facc15",
-    pathId: "policy-flow",
-    outputPathId: "queue-flow",
+    pathId: "asset-flow",
+    outputPathId: "asset-output-flow",
     run: [
-      "retrieve source policy",
-      "compare requested action",
-      "queue compliant follow-up",
+      "search institutional assets",
+      "explain recommendations",
+      "return visual result set",
     ],
   },
 ];
 
 const outputNodes = [
   {
-    id: "answer",
-    label: "Staff Answer",
-    meta: "ANS",
+    id: "map",
+    label: "Faculty Map",
+    meta: "MAP",
     top: "15%",
     right: "4%",
     color: "#60a5fa",
-    pathId: "answer-flow",
-    sourcePathId: "student-flow",
+    pathId: "map-flow",
+    sourcePathId: "faculty-flow",
     run: [
-      "read student context",
-      "cite source record",
-      "return grounded answer",
+      "connect people and topics",
+      "show source evidence",
+      "export campaign targets",
     ],
   },
   {
-    id: "report",
-    label: "Report Drafted",
-    meta: "RPT",
+    id: "board",
+    label: "Editorial Brief",
+    meta: "BRF",
     top: "38%",
     right: "4%",
     color: "#38bdf8",
-    pathId: "report-flow",
+    pathId: "board-flow",
     sourcePathId: "research-flow",
-    run: ["summarize papers", "attach faculty context", "export admin report"],
+    run: ["summarize evidence", "attach citations", "surface story angles"],
   },
   {
-    id: "approval",
-    label: "Approval Routed",
-    meta: "APV",
+    id: "benchmark",
+    label: "Benchmark Report",
+    meta: "CMP",
     top: "61%",
     right: "4%",
     color: "#2563eb",
-    pathId: "approval-flow",
-    sourcePathId: "faculty-flow",
-    run: ["identify approver", "apply department rules", "assign next action"],
+    pathId: "benchmark-flow",
+    sourcePathId: "program-flow",
+    run: ["compare peer schools", "score market themes", "visualize gaps"],
   },
   {
-    id: "followup",
-    label: "Follow-up Queued",
-    meta: "SYNC",
+    id: "asset-output",
+    label: "Asset Board",
+    meta: "VIS",
     top: "77%",
     right: "4%",
     color: "#93c5fd",
-    pathId: "queue-flow",
-    sourcePathId: "policy-flow",
-    run: ["validate policy", "prepare message", "sync workflow state"],
+    pathId: "asset-output-flow",
+    sourcePathId: "asset-flow",
+    run: ["rank resources", "explain relevance", "display visual board"],
   },
 ];
 
 const flowPaths = [
   {
-    id: "student-flow",
+    id: "faculty-flow",
     d: "M158 93 C258 92 302 126 350 190",
     color: "#38bdf8",
   },
   {
-    id: "faculty-flow",
+    id: "research-flow",
     d: "M158 202 C252 202 304 207 350 220",
     color: "#818cf8",
   },
   {
-    id: "research-flow",
+    id: "program-flow",
     d: "M158 311 C252 310 306 280 350 248",
     color: "#22c55e",
   },
   {
-    id: "policy-flow",
+    id: "asset-flow",
     d: "M158 420 C260 398 302 326 350 275",
     color: "#facc15",
   },
   {
-    id: "answer-flow",
+    id: "map-flow",
     d: "M470 222 C545 190 588 108 662 102",
     color: "#60a5fa",
   },
   {
-    id: "report-flow",
+    id: "board-flow",
     d: "M472 242 C548 242 596 218 662 210",
     color: "#38bdf8",
   },
   {
-    id: "approval-flow",
+    id: "benchmark-flow",
     d: "M470 262 C548 286 592 330 662 328",
     color: "#2563eb",
   },
   {
-    id: "queue-flow",
+    id: "asset-output-flow",
     d: "M462 282 C535 338 592 414 662 420",
     color: "#93c5fd",
   },
@@ -178,9 +178,9 @@ export default function Hero() {
     [activeItem],
   );
   const activeWorkflowSteps = [
-    { label: "Retrieve", detail: activeItem.run[0] },
-    { label: "Compose", detail: activeItem.run[1] },
-    { label: "Route", detail: activeItem.run[2] },
+    { label: "Search", detail: activeItem.run[0] },
+    { label: "Ground", detail: activeItem.run[1] },
+    { label: "Visualize", detail: activeItem.run[2] },
   ];
 
   return (
@@ -197,7 +197,7 @@ export default function Hero() {
             transition={{ duration: 0.5 }}
           >
             <span className="h-2 w-2 rounded-full bg-accent" />
-            University ops, automated
+            Visual intelligence for universities
           </motion.div>
 
           <motion.h1
@@ -206,7 +206,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65 }}
           >
-            AI that runs campus workflows.
+            AI that turns campus resources into visual answers.
           </motion.h1>
 
           <motion.p
@@ -215,8 +215,9 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Operon connects internal systems, understands institutional context,
-            and automates repetitive operational work across the university.
+            Operon searches a school’s papers, people, programs, and assets,
+            then returns source-grounded maps, briefs, benchmarks, and result
+            boards teams can act on.
           </motion.p>
 
           <motion.div
@@ -235,7 +236,7 @@ export default function Hero() {
               href="#solution"
               className="rounded-md border border-white/16 px-7 py-4 text-center text-[16px] font-medium text-white transition-colors hover:border-white/40 hover:bg-white/6"
             >
-              View system
+              View intelligence layer
             </a>
           </motion.div>
         </div>
@@ -376,8 +377,8 @@ export default function Hero() {
                 <span className="block text-[17px] font-medium leading-tight text-white/82">
                   {node.label}
                 </span>
-                <span className="mt-1 block font-mono text-[11px] text-white/36">
-                  click to inspect
+                  <span className="mt-1 block font-mono text-[11px] text-white/36">
+                  school source
                 </span>
               </span>
             </motion.button>
@@ -419,8 +420,8 @@ export default function Hero() {
                 <span className="block text-[17px] font-medium leading-tight text-white/82">
                   {node.label}
                 </span>
-                <span className="mt-1 block font-mono text-[11px] text-white/36">
-                  click to inspect
+                  <span className="mt-1 block font-mono text-[11px] text-white/36">
+                  evidence view
                 </span>
               </span>
             </motion.button>
@@ -433,7 +434,7 @@ export default function Hero() {
                   Operon
                 </div>
                 <div className="mt-1 font-mono text-[10px] uppercase tracking-[0px] text-sky-200/70">
-                  ops engine
+                  intelligence layer
                 </div>
               </div>
             </div>
@@ -441,7 +442,7 @@ export default function Hero() {
 
           <div className="absolute left-1/2 top-[19%] flex -translate-x-1/2 items-center gap-2 rounded-full border border-sky-300/15 bg-sky-300/8 px-4 py-2 font-mono text-[11px] uppercase tracking-[0px] text-sky-100/64">
             <span className="h-2 w-2 rounded-full bg-sky-300" />
-            normalize -&gt; reason -&gt; act
+            search -&gt; ground -&gt; visualize
           </div>
 
           <motion.div
@@ -504,7 +505,7 @@ export default function Hero() {
         >
           <div className="rounded-lg border border-white/12 bg-white/6 p-5">
             <div className="mb-4 font-mono text-[12px] uppercase tracking-[0px] text-sky-200/70">
-              Inputs
+              School sources
             </div>
             <div className="grid grid-cols-2 gap-3">
               {inputNodes.map((node) => (
@@ -529,15 +530,15 @@ export default function Hero() {
           </div>
           <div className="rounded-lg border border-sky-300/35 bg-accent/12 p-5 text-center">
             <div className="text-[24px] font-medium text-white">
-              Operon runtime
+              Operon intelligence layer
             </div>
             <div className="mt-2 text-[14px] text-white/58">
-              connects, reasons, acts
+              searches, grounds, visualizes
             </div>
           </div>
           <div className="rounded-lg border border-white/12 bg-white/6 p-5">
             <div className="mb-4 font-mono text-[12px] uppercase tracking-[0px] text-sky-200/70">
-              Outputs
+              Visual outputs
             </div>
             <div className="grid grid-cols-2 gap-3">
               {outputNodes.map((node) => (

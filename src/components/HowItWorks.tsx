@@ -6,25 +6,25 @@ const steps = [
     num: "01",
     title: "Connect",
     description:
-      "We integrate with your school's existing tools and data sources. No rip-and-replace.",
+      "We connect to the resources schools already use: papers, pages, assets, profiles, and internal datasets.",
   },
   {
     num: "02",
-    title: "Organize",
+    title: "Index",
     description:
-      "Operon turns fragmented institutional data into a searchable, structured knowledge layer.",
+      "Operon structures institutional knowledge into a searchable layer with metadata, relationships, and permissions.",
   },
   {
     num: "03",
-    title: "Automate",
+    title: "Visualize",
     description:
-      "Automate repetitive work like research tracking, reporting, content generation, and internal requests.",
+      "Teams get maps, briefs, benchmarks, ranked assets, and explainable recommendations instead of flat links.",
   },
   {
     num: "04",
-    title: "Expand",
+    title: "Act",
     description:
-      "Start with one workflow, then expand across departments as new needs emerge.",
+      "Those visual outputs feed editorial planning, research discovery, curriculum reviews, and communication workflows.",
   },
 ];
 
@@ -42,11 +42,11 @@ export default function HowItWorks() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="font-display text-[42px] md:text-[76px] font-normal leading-[0.98] tracking-[0px] text-white">
-            From raw data to executed workflows.
+            From scattered resources to visual intelligence.
           </h2>
           <p className="text-[18px] leading-[1.55] text-white/58">
-            Start narrow. Connect the systems. Let the operating layer expand as
-            departments discover repeatable work.
+            Start with one high-value search problem, then expand as teams see
+            the same intelligence layer answer more institutional questions.
           </p>
         </motion.div>
 

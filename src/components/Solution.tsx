@@ -3,8 +3,8 @@ import { useRef } from "react";
 
 const capabilities = [
   {
-    title: "Retrieve Information Faster",
-    description: "Instant answers from across all institutional data sources.",
+    title: "Search Institutional Resources",
+    description: "Query papers, faculty, program pages, events, and internal assets together.",
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
         <circle cx="11" cy="11" r="7" stroke="#2563eb" strokeWidth="1.5" />
@@ -18,8 +18,8 @@ const capabilities = [
     ),
   },
   {
-    title: "Generate Reports Automatically",
-    description: "Pull structured reports from fragmented data in seconds.",
+    title: "Generate Visual Intelligence",
+    description: "Turn fragmented sources into maps, briefs, benchmarks, and ranked result boards.",
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
         <rect
@@ -41,9 +41,9 @@ const capabilities = [
     ),
   },
   {
-    title: "Answer Internal Questions",
+    title: "Explain Every Recommendation",
     description:
-      "AI that understands your institution's context, not just keywords.",
+      "Show why each result matters with citations, source context, and relationships.",
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
         <path
@@ -55,9 +55,9 @@ const capabilities = [
     ),
   },
   {
-    title: "Automate Day-to-Day Operations",
+    title: "Move Into Workflow",
     description:
-      "Replace repetitive tasks with intelligent, institution-specific automations.",
+      "Convert visual outputs into editorial plans, curriculum reviews, and research operations.",
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
         <path
@@ -90,11 +90,11 @@ export default function Solution() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="font-display text-[42px] md:text-[76px] font-normal leading-[0.98] tracking-[0px] text-[#07120f] mb-6">
-            One operating layer for institutional work.
+            One intelligence layer for institutional resources.
           </h2>
           <p className="text-muted text-[19px] leading-[1.55] tracking-[0px] max-w-[640px]">
-            Operon embeds AI inside existing systems so staff can retrieve,
-            generate, answer, and act from the same operational context.
+            Operon searches across a school’s knowledge base and presents
+            visual, source-grounded outputs that teams can use immediately.
           </p>
         </motion.div>
 
@@ -109,16 +109,16 @@ export default function Solution() {
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(37,99,235,0.2),transparent_55%)]" />
             <div className="relative flex h-full min-h-[388px] items-center justify-center">
               <div className="absolute left-4 top-6 rounded-md border border-white/12 bg-white/7 px-4 py-3 font-mono text-[12px] text-white/62">
-                student records
+                faculty profiles
               </div>
               <div className="absolute right-4 top-16 rounded-md border border-white/12 bg-white/7 px-4 py-3 font-mono text-[12px] text-white/62">
                 research papers
               </div>
               <div className="absolute bottom-8 left-8 rounded-md border border-white/12 bg-white/7 px-4 py-3 font-mono text-[12px] text-white/62">
-                CRM
+                program pages
               </div>
               <div className="absolute bottom-16 right-8 rounded-md border border-white/12 bg-white/7 px-4 py-3 font-mono text-[12px] text-white/62">
-                spreadsheets
+                events & assets
               </div>
               <div className="relative flex h-36 w-36 items-center justify-center rounded-full border border-accent/50 bg-accent/15 text-center font-display text-[22px] font-medium">
                 Operon

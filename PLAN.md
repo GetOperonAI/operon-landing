@@ -1,7 +1,7 @@
 # Operon Landing Page — Implementation Plan
 
 ## Overview
-A high-converting, YC-quality landing page for Operon — the AI operating system for school management. Single-page design with clean, modern aesthetics per DESIGN.md (Miro-inspired design system).
+A high-converting, YC-quality landing page for Operon — the visual intelligence layer for universities that searches school resources and returns source-grounded maps, briefs, benchmarks, and result boards. Single-page design with clean, modern aesthetics per DESIGN.md (Miro-inspired design system).
 
 ## Tech Stack
 - **Framework**: React (Vite)
@@ -19,32 +19,32 @@ A high-converting, YC-quality landing page for Operon — the AI operating syste
 - Mobile: hamburger menu
 
 ### 2. Hero Section
-- Headline: "The AI Operating System for Universities"
-- Subheadline: value prop paragraph
+- Headline: "AI That Turns Campus Resources Into Visual Answers"
+- Subheadline: search school papers, people, programs, and assets, then return visual intelligence teams can act on
 - Two CTAs: "Request a Demo" (primary blue) + "See How It Works" (outlined)
 - Social proof line below CTAs
 - Hero visual: abstract illustration or product screenshot mockup
 - Background: white with subtle pastel accent
 
 ### 3. Problem Section
-- Heading: "Universities Don't Fail Because They Lack Tools..."
+- Heading: "School Knowledge Is Trapped in Flat Search"
 - 4 pain point cards with icons on pastel backgrounds
 - Layout: 2x2 grid on desktop, stacked on mobile
 
 ### 4. Solution Section
-- Heading: "Replace 30-50% of Manual Work"
+- Heading: "One Intelligence Layer for Institutional Resources"
 - 4 capability cards with icons
 - Pastel teal or coral accents
 - Optional: simple animation showing data flowing through system
 
 ### 5. How It Works
-- 4-step horizontal flow: Connect > Structure > Automate > Expand
+- 4-step horizontal flow: Connect > Index > Visualize > Act
 - Numbered steps with icons
 - Clean connector lines between steps
 - Stacked vertically on mobile
 
 ### 6. Use Cases
-- Heading: "Proven Workflows Deployed at a Top Global Business School"
+- Heading: "Four Workflows Already Deployed"
 - 3-4 use case cards with pastel backgrounds
 - Each card: icon, title, short description
 - Expandable or tab-based on mobile

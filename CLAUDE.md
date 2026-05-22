@@ -70,4 +70,4 @@ All tokens in `src/index.css` under `@theme`, documented in `DESIGN.md`:
 
 ## Company Context
 
-Operon is an AI operating system for universities. Connects to a school's internal data and systems, automates 30-50% of manual admin work. Has 1 paying enterprise customer, $30K+ revenue, 3+ workflows deployed. Founded by Burak Barlas and Tanalp Sengun.
+Operon is a visual intelligence layer for universities. It searches a school's papers, people, programs, and assets, then returns source-grounded maps, briefs, benchmarks, and result boards teams can act on. It reduces 20-30% of manual admin workload for 20+ employees, is currently working with 1 FT10 MBA school customer, and has 4 AI workflows deployed. Founded by Burak Barlas and Tanalp Sengun.
