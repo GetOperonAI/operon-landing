@@ -4,7 +4,8 @@ import { useRef } from "react";
 const capabilities = [
   {
     title: "Search Institutional Resources",
-    description: "Query papers, faculty, program pages, events, and internal assets together.",
+    description:
+      "Query papers, faculty, program pages, events, and internal assets together.",
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
         <circle cx="11" cy="11" r="7" stroke="#2563eb" strokeWidth="1.5" />
@@ -19,7 +20,8 @@ const capabilities = [
   },
   {
     title: "Generate Visual Intelligence",
-    description: "Turn fragmented sources into maps, briefs, benchmarks, and ranked result boards.",
+    description:
+      "Turn fragmented sources into maps, briefs, benchmarks, and ranked result boards.",
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
         <rect
@@ -143,10 +145,10 @@ export default function Solution() {
             {capabilities.map((cap, i) => (
               <motion.div
                 key={cap.title}
-                className="bg-[#f8f8f4] p-7"
+                className="bg-[#f8f8f4] p-7 transition-colors hover:bg-white"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.4, delay: 0.1 + i * 0.1 }}
+                transition={{ duration: 0.4, delay: 0.1 + i * 0.08 }}
               >
                 <div className="w-10 h-10 rounded-md bg-accent-wash flex items-center justify-center mb-7">
                   {cap.icon}

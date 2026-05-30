@@ -36,28 +36,30 @@ export default function HowItWorks() {
     <section className="px-6 py-24 md:py-32 bg-[#07120f] text-white" ref={ref}>
       <div className="max-w-[1200px] mx-auto">
         <motion.div
-          className="mb-16 grid gap-8 md:grid-cols-[1fr_0.72fr] md:items-end"
+          className="mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="font-display text-[42px] md:text-[76px] font-normal leading-[0.98] tracking-[0px] text-white">
-            From scattered resources to visual intelligence.
-          </h2>
-          <p className="text-[18px] leading-[1.55] text-white/58">
-            Start with one high-value search problem, then expand as teams see
-            the same intelligence layer answer more institutional questions.
-          </p>
+          <div className="grid gap-8 md:grid-cols-[1fr_0.72fr] md:items-end">
+            <h2 className="font-display text-[42px] md:text-[76px] font-normal leading-[0.98] tracking-[0px] text-white">
+              From scattered resources to visual intelligence.
+            </h2>
+            <p className="text-[18px] leading-[1.55] text-white/58">
+              Start with one high-value search problem, then expand as teams see
+              the same intelligence layer answer more institutional questions.
+            </p>
+          </div>
         </motion.div>
 
         <div className="grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-white/12 bg-white/12 md:grid-cols-4">
           {steps.map((step, i) => (
             <motion.div
               key={step.num}
-              className="relative min-h-[260px] bg-[#0c1713] p-7"
+              className="relative min-h-[260px] bg-[#0c1713] p-7 transition-colors hover:bg-[#0f1d18]"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.4, delay: i * 0.12 }}
+              transition={{ duration: 0.4, delay: i * 0.08 }}
             >
               {i < steps.length - 1 && (
                 <div className="pulse-line hidden md:block absolute top-12 left-[58%] right-[-28%] h-px bg-gradient-to-r from-accent to-sky-300" />

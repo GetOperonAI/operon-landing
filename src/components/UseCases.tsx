@@ -91,7 +91,7 @@ export default function UseCases() {
           {useCases.map((uc, i) => (
             <motion.div
               key={uc.title}
-              className="group overflow-hidden rounded-lg border border-card-border bg-white"
+              className="group overflow-hidden rounded-lg border border-card-border bg-white transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_18px_40px_-20px_rgba(7,18,15,0.35)]"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: i * 0.1 }}

@@ -8,7 +8,7 @@ const founders = [
     name: "Burak Barlas",
     role: "Co-Founder, Engineering",
     location: "Los Angeles, CA",
-    bio: "Full-stack engineer shipping product alongside Tanalp. Previously co-founded a startup together.",
+    bio: "Entrepreneur and product builder. Previously co-founded a startup with Tanalp. Focused on developing AI systems that transform complex information into practical tools for research, strategy, and decision-making.",
     image: burakPortrait,
   },
   {
@@ -28,34 +28,36 @@ export default function Team() {
     <section id="team" className="py-24 md:py-32 px-6 bg-white" ref={ref}>
       <div className="max-w-[1200px] mx-auto">
         <motion.div
-          className="mb-14 grid gap-8 md:grid-cols-[0.92fr_1.08fr] md:items-end"
+          className="mb-14"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="font-display text-[42px] md:text-[76px] font-normal leading-[0.98] tracking-[0px] text-[#07120f]">
-            Built by operators, not a pitch deck.
-          </h2>
-          <p className="text-muted text-[19px] leading-[1.55] tracking-[0px] max-w-[620px]">
-            The founders have known each other for 5–10+ years. College friends,
-            brothers, and repeat collaborators.
-          </p>
+          <div className="grid gap-8 md:grid-cols-[0.92fr_1.08fr] md:items-end">
+            <h2 className="font-display text-[42px] md:text-[76px] font-normal leading-[0.98] tracking-[0px] text-[#07120f]">
+              Built by operators, not a pitch deck.
+            </h2>
+            <p className="text-muted text-[19px] leading-[1.55] tracking-[0px] max-w-[620px]">
+              The founders have known each other for 5–10+ years. College
+              friends, brothers, and repeat collaborators.
+            </p>
+          </div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-px overflow-hidden rounded-lg border border-card-border bg-card-border">
           {founders.map((f, i) => (
             <motion.div
               key={f.name}
-              className="bg-[#f8f8f4] p-8 md:p-10"
+              className="group bg-[#f8f8f4] p-8 transition-colors hover:bg-white md:p-10"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
+              transition={{ duration: 0.4, delay: i * 0.08 }}
             >
               <div className="mb-8 aspect-[4/3] overflow-hidden rounded-md bg-accent-wash">
                 <img
                   src={f.image}
                   alt={`${f.name} portrait`}
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                   loading="lazy"
                 />
               </div>

@@ -134,28 +134,30 @@ export default function Problem() {
     <section className="px-6 py-24 md:py-32 bg-[#f8f8f4]" ref={ref}>
       <div className="max-w-[1200px] mx-auto">
         <motion.div
-          className="grid gap-8 md:grid-cols-[0.95fr_1.05fr] md:items-end mb-16"
+          className="mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="font-display text-[42px] md:text-[72px] font-normal leading-[0.98] tracking-[0px] text-[#07120f]">
-            School knowledge is trapped in flat search.
-          </h2>
-          <p className="max-w-[460px] text-[24px] leading-[1.55] text-muted md:ml-auto">
-            Staff can find files. The hard part is turning scattered resources
-            into visual, source-backed intelligence.
-          </p>
+          <div className="grid gap-8 md:grid-cols-[0.95fr_1.05fr] md:items-end">
+            <h2 className="font-display text-[42px] md:text-[72px] font-normal leading-[0.98] tracking-[0px] text-[#07120f]">
+              School knowledge is trapped in flat search.
+            </h2>
+            <p className="max-w-[460px] text-[24px] leading-[1.55] text-muted md:ml-auto">
+              Staff can find files. The hard part is turning scattered resources
+              into visual, source-backed intelligence.
+            </p>
+          </div>
         </motion.div>
 
         <div className="grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-card-border bg-card-border md:grid-cols-4">
           {painPoints.map((point, i) => (
             <motion.div
               key={point.title}
-              className="bg-white p-7 md:min-h-[260px]"
+              className="group bg-white p-7 transition-colors hover:bg-accent-wash/40 md:min-h-[260px]"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
+              transition={{ duration: 0.4, delay: i * 0.06 }}
             >
               <div className="w-10 h-10 rounded-md bg-accent-wash flex items-center justify-center mb-8">
                 {point.icon}
