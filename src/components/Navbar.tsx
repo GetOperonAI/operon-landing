@@ -29,6 +29,12 @@ export default function Navbar() {
             </a>
           ))}
           <a
+            href="#demo"
+            className="text-white/80 text-[15px] font-medium hover:text-white transition-colors"
+          >
+            Live demo
+          </a>
+          <a
             href="#contact"
             className="bg-white text-[#07120f] text-[15px] font-medium px-5 py-2.5 rounded-md hover:bg-accent hover:text-white transition-colors"
           >
@@ -66,6 +72,13 @@ export default function Navbar() {
                   {link.label}
                 </a>
               ))}
+              <a
+                href="#demo"
+                className="text-white/80 text-[16px] font-medium hover:text-white"
+                onClick={() => setMobileOpen(false)}
+              >
+                Live demo
+              </a>
               <a
                 href="#contact"
                 className="bg-white text-[#07120f] text-center text-[15px] font-medium px-6 py-2.5 rounded-md"

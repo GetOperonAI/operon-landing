@@ -227,16 +227,16 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <a
-              href="#contact"
+              href="#demo"
               className="rounded-md bg-accent px-7 py-4 text-center text-[16px] font-medium text-white transition-colors hover:bg-accent-light"
             >
-              Request a demo
+              Explore live demo
             </a>
             <a
-              href="#solution"
+              href="#contact"
               className="rounded-md border border-white/16 px-7 py-4 text-center text-[16px] font-medium text-white transition-colors hover:border-white/40 hover:bg-white/6"
             >
-              View intelligence layer
+              Request a demo
             </a>
           </motion.div>
         </div>
