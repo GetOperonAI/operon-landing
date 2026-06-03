@@ -47,8 +47,34 @@ export default function ResearchModule({ onSelect }: ModuleProps) {
         onChange={setQuery}
         onSubmit={run}
         placeholder="Ask about people, topics, or research activity…"
-        suggestions={phase === "idle" ? suggestions : undefined}
       />
+
+      {phase === "idle" && (
+        <div className="mt-6 rounded-xl border border-[#e6e9ef] bg-white p-5">
+          <SectionLabel>Try one of these</SectionLabel>
+          <div className="space-y-2">
+            {suggestions.map((s) => (
+              <button
+                key={s}
+                onClick={() => {
+                  setQuery(s);
+                  run(s);
+                }}
+                className="group flex w-full items-center justify-between gap-3 rounded-lg border border-[#eef2f7] bg-[#fafbfd] px-4 py-3 text-left transition-colors hover:border-accent hover:bg-accent/5"
+              >
+                <span className="flex items-center gap-2.5 text-[14px] text-[#334155]">
+                  <svg className="h-4 w-4 shrink-0 text-[#94a3b8] group-hover:text-accent" viewBox="0 0 24 24" fill="none">
+                    <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="1.7" />
+                    <path d="M16.5 16.5L21 21" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+                  </svg>
+                  {s}
+                </span>
+                <span className="text-[12px] font-medium text-[#94a3b8] group-hover:text-accent">ask →</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
 
       <div className="mt-6">
         {phase === "running" && submitted && (

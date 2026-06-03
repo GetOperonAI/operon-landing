@@ -1,15 +1,21 @@
 import { useState } from "react";
-import { programmes, competitors, kindColors } from "../data";
+import { programmes, competitors, kindColors, type Programme } from "../data";
 import type { ModuleProps } from "../types";
 import { Processing, Reveal, SectionLabel, Stat } from "../shared";
 
-// MSc AI benchmark (Scenario 2)
-const ourModules = programmes.find((p) => p.id === "msc-ai")!.modules;
 const allCompetitorModules = Array.from(new Set(competitors.flatMap((c) => c.modules)));
-const missingTopics = allCompetitorModules.filter((m) => !ourModules.includes(m));
 
 export default function ProgrammesModule({ onSelect, selection }: ModuleProps) {
   const [phase, setPhase] = useState<"idle" | "running" | "done">("idle");
+
+  const selectedId = selection?.kind === "programme" ? selection.id : "msc-ai";
+  const target = programmes.find((p) => p.id === selectedId)!;
+
+  const selectProgramme = (id: string) => {
+    onSelect({ kind: "programme", id });
+    // benchmark targets the clicked programme — reset so it re-runs for it
+    if (id !== selectedId) setPhase("idle");
+  };
 
   return (
     <div>
@@ -20,11 +26,11 @@ export default function ProgrammesModule({ onSelect, selection }: ModuleProps) {
 
       <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {programmes.map((p) => {
-          const active = selection?.kind === "programme" && selection.id === p.id;
+          const active = p.id === selectedId;
           return (
             <button
               key={p.id}
-              onClick={() => onSelect({ kind: "programme", id: p.id })}
+              onClick={() => selectProgramme(p.id)}
               className={`rounded-xl border bg-white p-4 text-left transition-all hover:shadow-md ${
                 active ? "border-accent ring-2 ring-accent/15" : "border-[#e6e9ef]"
               }`}
@@ -44,7 +50,7 @@ export default function ProgrammesModule({ onSelect, selection }: ModuleProps) {
           <div>
             <SectionLabel>Competitive intelligence</SectionLabel>
             <h3 className="font-display text-[18px] font-medium text-[#0f172a]">
-              Benchmark MSc Artificial Intelligence
+              Benchmark {target.name}
             </h3>
             <p className="mt-1 text-[13.5px] text-[#64748b]">
               Compare curriculum coverage against {competitors.length} competitor institutions.
@@ -63,8 +69,9 @@ export default function ProgrammesModule({ onSelect, selection }: ModuleProps) {
         {phase === "running" && (
           <div className="mt-5">
             <Processing
+              key={target.id}
               steps={[
-                "Parsing our curriculum & module data",
+                `Parsing ${target.name} curriculum & module data`,
                 "Crawling competitor programme pages",
                 "Aligning topics across institutions",
                 "Scoring coverage, strengths & gaps",
@@ -74,13 +81,15 @@ export default function ProgrammesModule({ onSelect, selection }: ModuleProps) {
           </div>
         )}
 
-        {phase === "done" && <Benchmark onSelect={onSelect} />}
+        {phase === "done" && <Benchmark key={target.id} programme={target} onSelect={onSelect} />}
       </div>
     </div>
   );
 }
 
-function Benchmark({ onSelect }: { onSelect: ModuleProps["onSelect"] }) {
+function Benchmark({ programme, onSelect }: { programme: Programme; onSelect: ModuleProps["onSelect"] }) {
+  const ourModules = programme.modules;
+  const missingTopics = allCompetitorModules.filter((m) => !ourModules.includes(m));
   const coverage = Math.round((ourModules.length / allCompetitorModules.length) * 100);
   return (
     <div className="mt-6 space-y-5">
@@ -141,12 +150,10 @@ function Benchmark({ onSelect }: { onSelect: ModuleProps["onSelect"] }) {
           <div className="rounded-xl border border-[#d6e4ff] bg-[#f5f8ff] p-5">
             <div className="mb-3 text-[13px] font-semibold text-accent">Recommendations</div>
             <div className="space-y-2">
-              {[
-                "Add an AI Ethics & Governance module",
-                "Introduce an industry capstone project",
-                "Expand AI Product Management coverage",
-                "Integrate sustainability into core ML",
-              ].map((r) => (
+              {(missingTopics.length
+                ? missingTopics.map((m) => `Add a ${m} module to close the gap`)
+                : ["Curriculum already covers all benchmarked topics — extend depth with electives"]
+              ).map((r) => (
                 <div key={r} className="flex items-start gap-2 text-[13.5px] text-[#334155]">
                   <span className="mt-0.5 text-accent">＋</span> {r}
                 </div>

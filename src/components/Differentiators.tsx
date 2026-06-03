@@ -39,11 +39,11 @@ export default function Differentiators() {
         >
           <div className="grid gap-8 md:grid-cols-[0.92fr_1.08fr] md:items-end">
             <h2 className="font-display text-[42px] md:text-[76px] font-normal leading-[0.98] tracking-[0px] text-[#07120f]">
-              Why generic AI feels shallow.
+              Why schools choose Operon.
             </h2>
             <p className="text-[19px] leading-[1.55] text-muted">
-              Schools need more than generated text. They need a system that can
-              search institutional resources and show the evidence visually.
+              Purpose-built for institutions — not a generic assistant. Operon
+              searches your own resources and shows the evidence visually.
             </p>
           </div>
         </motion.div>
